@@ -76,6 +76,15 @@ body{
     line-height: 1.19;
 }
 
+.section-item-heading{
+    color: var(--black);
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: -1.28px;
+}
+
 /* Header */
 .header{
     width: 100%;
@@ -259,11 +268,55 @@ body{
 
 .client__brand{
     height: 36px;
+    transition: .3s ease;
 }
 
 .client__brand:hover{
     cursor: pointer;
     transform: scale(1.2);
+}
+
+/* Special */
+.special{
+    padding: 140px;
+}
+
+.special-head{
+    text-align: center;
+}
+
+.special__desc{
+    width: 65%;
+    margin: 20px auto 60px;
+}
+
+.special-item{
+    padding: 24px;
+    background-color: #FBFAFF;
+    transition: .3s ease;
+}
+
+.special-item:hover{
+    box-shadow: 1px 1px 10px 0 #ccc;
+}
+
+.special-item:hover .special-item__img{
+    transform: scale(1.2);
+}
+
+.special-item a{
+    text-decoration: none;
+}
+
+.special-item__img{
+    width: 74px;
+    object-fit: cover;
+    transition: .3s ease;
+}
+
+.special-item__heading{
+    font-size: 3rem;
+    margin: 22px 0 15px;
 }
 
 
