@@ -30,3 +30,18 @@ video.addEventListener('ended', () => {
     isPlay = false;
     playBtn.innerHTML = '<img src="./assets/icons/play_video.svg" alt="play-icon">';
 });
+
+const feedbackDots = document.querySelectorAll('.feedback__dot')
+const feedbackItems = document.querySelectorAll('.feedback-item')
+feedbackDots.forEach((dot) => {
+    dot.addEventListener('click', e => {
+        feedbackDots.forEach(dot => {
+            dot.classList.remove('feedback__dot--active')
+        })
+        e.target.classList.add('feedback__dot--active')
+        index = e.target.dataset.index
+        feedbackItems.forEach(feedback => {
+            feedback.style.transform = `translateX(${-(index) * 100}%)`
+        })
+    })
+})

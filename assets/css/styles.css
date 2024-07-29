@@ -460,6 +460,10 @@ a{
     position: relative;
 }
 
+.journey-item .desc{
+    white-space: nowrap;
+}
+
 .journey__video video{
     position: absolute;
     top: 0;
@@ -491,6 +495,74 @@ a{
     visibility: visible;
 }
 
+/* Feedback */
+.feedback{
+    padding: 10px 0;
+}
+
+.feedback__heading{
+    text-align: center;
+}
+
+.feedback__desc{
+    width: 50%;
+    margin: 20px 0 60px;
+    text-align: center;
+    margin: 20px auto 60px;
+}
+
+.feedback__list{
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.feedback-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    flex-shrink: 0;
+    transition: .3s ease;
+}
+
+.feedback__msg{
+    width: 60%;
+    color: var(--text-color);
+    text-align: center;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.67;
+}
+
+.feedback__user{
+    margin-top: 36px;
+    display: flex;
+    column-gap: 16px;
+    align-items: center;
+}
+
+.feedback__user-avt{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: #F29764;
+}
+
+.feedback__user-name{
+    color: var(--black);
+    text-align: center;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.33;
+}
+
+.feedback__user-desc{
+    font-size: 1.6rem;
+    line-height: 1.8125;
+}
 
 /* Footer */
 .footer{
@@ -498,3 +570,50 @@ a{
     max-width: calc(100% - 48px);
     margin: 0 auto;
 } 
+
+.feedback__dots{
+    display: flex;
+    justify-content: center;
+    column-gap: 15px;
+    margin-top: 40px;
+}
+
+.feedback__dot{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    opacity: 0.2;
+    background: var(--black);
+}
+
+.feedback__dot:hover{
+    cursor: pointer;
+    opacity: 0.4;
+}
+
+.feedback__dot--active{
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 1px solid var(--primary-purple);
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feedback__dot--active:hover{
+    cursor: default;
+    opacity: 1;
+}
+
+.feedback__dot--active::after{
+    content: "";
+    width: 12px;
+    height: 12px;
+    display: block;
+    background-color: var(--primary-purple);
+    border-radius: 50%;
+}
+
+/* Service */
