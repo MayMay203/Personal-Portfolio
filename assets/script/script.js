@@ -7,3 +7,26 @@ navarLink.forEach(link => {
         e.target.classList.add('navbar__link--active')
     })
 })
+
+const video = document.querySelector('video')
+let isPlay = false
+const playBtn = document.querySelector('.video__play-btn')
+playBtn.addEventListener('click', () => {
+    if (isPlay) {
+        isPlay = false;
+        video.pause();
+        playBtn.innerHTML=''
+        playBtn.innerHTML = '<img src="./assets/icons/play_video.svg" alt="play-icon">'
+    }
+    else {
+        isPlay = true;
+        video.play();
+        playBtn.innerHTML = ''
+        playBtn.innerHTML='<img src="./assets/icons/pause_video.svg" alt="play-icon" class="video__pause-icon">'
+    }
+})
+
+video.addEventListener('ended', () => {
+    isPlay = false;
+    playBtn.innerHTML = '<img src="./assets/icons/play_video.svg" alt="play-icon">';
+});
