@@ -39,15 +39,24 @@
 </head>
 
 <body>
+    <!-- Mobile header -->
+    <header class="header-mobile">
+        <input type="checkbox" class="input-checkbox" id="input-checkbox" hidden>
+        <label class="overlay" for="input-checkbox"></label>
+        <div class="menu-drawer"></div>
+    </header>
+    <!-- PC header -->
     <header class="header">
         <div class="row">
             <div class="col">
                 <div class="header__inner">
-                    <a href="#" class="logo">
-                        <img src="./assets/icons/logo.png" alt="logo-icon" class="logo-icon">
-                        <img src="./assets/img/logo-text.png" alt="logo-text" class="logo-text">
-                    </a>
-                    <img src="./assets/img/logo-img.png" alt="logo-img" class="logo-img">
+                <div class="header__logo">
+                        <a href="#" class="logo">
+                            <img src="./assets/icons/logo.png" alt="logo-icon" class="logo-icon">
+                            <img src="./assets/img/logo-text.png" alt="logo-text" class="logo-text">
+                        </a>
+                        <img src="./assets/img/logo-img.png" alt="logo-img" class="logo-img">
+                </div>
                     <nav class="navbar">
                         <ul class="navbar__list">
                             <li class="navbar-item">
@@ -58,6 +67,14 @@
                             </li>
                         </ul>
                     </nav>
+                    <!-- Mobile menu -->
+                    <label for="input-checkbox" class="header__menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 34 34" fill="none">
+                            <circle opacity="0.2" cx="17" cy="17" r="16" stroke="#5D3BEE" />
+                            <path d="M10 20H25" stroke="#5D3BEE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M10 14H25" stroke="#5D3BEE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </label>
                 </div>
             </div>
         </div>
@@ -140,7 +157,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row special__list">
                 <div class="col-lg-4 col-12">
                     <div class="special-item">
                         <img src="./assets/img/special-img-1.png" alt="special-icon" class="special-item__img">
@@ -161,6 +178,15 @@
                     <a href="#!"><h3 class="section-item-heading special-item__heading">Interactive design</h3></a>
                     <p class="desc">Lorem ipsum dolor sit amet, solor adipiscing elit. Non nisl solor ut elementum turpis.</p>
                 </div>
+                </div>
+            </div>
+            <div class="row special__list-dots">
+                <div class="col-lg-2 offset-lg-5 col-4 offset-4">
+                    <div class="special__dots">
+                        <div class="special__dot special__dot--active" data-index="0"></div>
+                        <div class="special__dot" data-index="1"></div>
+                        <div class="special__dot" data-index="2"></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -350,7 +376,7 @@
                         </div>
             </div>
             <div class="row">
-                <div class="col-lg-2 offset-lg-5 col-4 offset-4">
+                <div class="col-lg-2 offset-lg-5 col-12">
                     <div class="feedback__dots">
                         <div class="feedback__dot feedback__dot--active" data-index="0"></div>
                         <div class="feedback__dot" data-index="1"></div>
@@ -448,7 +474,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row atmosphere__list">
                 <div class="col-lg-4 col-12">
                     <div class="atmosphere-item">
                         <img src="./assets/img/atmosphere-img-1.png" alt="computer" class="atmosphere__img">
@@ -462,6 +488,15 @@
                 <div class="col-lg-4 col-12">
                     <div class="atmosphere-item">
                         <img src="./assets/img/atmosphere-img-3.png" alt="computer" class="atmosphere__img">
+                    </div>
+                </div>
+            </div>
+            <div class="row atmosphere__list-dots">
+                <div class="col-lg-2 offset-lg-5 col-4 offset-4">
+                    <div class="atmosphere__dots">
+                        <div class="atmosphere__dot atmosphere__dot--active" data-index="0"></div>
+                        <div class="atmosphere__dot" data-index="1"></div>
+                        <div class="atmosphere__dot" data-index="2"></div>
                     </div>
                 </div>
             </div>
@@ -487,6 +522,12 @@
     </div>
     </section>
     <div class="header-bottom">
+    </div>
+    <!-- header-bottom-mobile -->
+    <div class="header-bottom-mobile">
+        <img src="./assets/img/logo-img.png" alt="logo-img" class="logo-img">
+        <nav class="navbar"></nav>
+        <div class="header-bottom__logo"></div>
     </div>
    <footer class="footer">
     <div class="row">

@@ -69,7 +69,7 @@ a{
 }
 
 .common-btn:hover{
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 .section-heading{
@@ -101,6 +101,12 @@ a{
     z-index: 50;
 }
 
+.header__logo{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
 .header__inner{
     display: flex;
     align-items: center;
@@ -122,7 +128,6 @@ a{
 }
 
 .logo-img{
-   margin-left: 15%;
    width: 80px;
    object-fit: cover;
 }
@@ -586,13 +591,18 @@ a{
     margin: 0 auto;
 } 
 
+.atmosphere__dots,
+.special__dots,
 .feedback__dots{
     display: flex;
     justify-content: center;
+    align-items: center;
     column-gap: 15px;
     margin-top: 40px;
 }
 
+.atmosphere__dot,
+.special__dot,
 .feedback__dot{
     width: 16px;
     height: 16px;
@@ -601,11 +611,15 @@ a{
     background: var(--black);
 }
 
+.atmosphere__dot:hover,
+.special__dot:hover,
 .feedback__dot:hover{
     cursor: pointer;
     opacity: 0.4;
 }
 
+.atmosphere__dot--active,
+.special__dot--active,
 .feedback__dot--active{
     width: 20px;
     height: 20px;
@@ -617,11 +631,15 @@ a{
     justify-content: center;
 }
 
+.atmosphere__dot--active:hover,
+.special__dot--active:hover,
 .feedback__dot--active:hover{
     cursor: default;
     opacity: 1;
 }
 
+.atmosphere__dot--active::after,
+.special__dot--active::after,
 .feedback__dot--active::after{
     content: "";
     width: 12px;
@@ -642,6 +660,7 @@ a{
 
 .service-item{
     display: flex;
+    column-gap: 12px;
     padding: 12px 0;
     justify-content: space-between;
     border-bottom: 2px solid var(--black);

@@ -31,17 +31,17 @@ video.addEventListener('ended', () => {
     playBtn.innerHTML = '<img src="./assets/icons/play_video.svg" alt="play-icon">';
 });
 
-const feedbackDots = document.querySelectorAll('.feedback__dot')
-const feedbackItems = document.querySelectorAll('.feedback-item')
-feedbackDots.forEach((dot) => {
+const specialDots = document.querySelectorAll('.special__dot')
+const specialItems = document.querySelectorAll('.special-item')
+specialDots.forEach((dot) => {
     dot.addEventListener('click', e => {
-        feedbackDots.forEach(dot => {
-            dot.classList.remove('feedback__dot--active')
+        specialDots.forEach(dot => {
+            dot.classList.remove('special__dot--active')
         })
-        e.target.classList.add('feedback__dot--active')
+        e.target.classList.add('special__dot--active')
         index = e.target.dataset.index
-        feedbackItems.forEach(feedback => {
-            feedback.style.transform = `translateX(${-(index) * 100}%)`
+        specialItems.forEach(special => {
+            special.style.transform = `translateX(${-(index) * 100}%)`
         })
     })
 })
@@ -66,10 +66,47 @@ serviceBtn.forEach(btn => {
             serviceItem.style.borderColor = 'var(--black)';
             serviceHeading.style.color = 'var(--black)'
             serviceDetail.style.display = 'none'
+            e.target.src = './assets/img/Left.svg'
         }
     })
 })
 
 const header = document.querySelector('.header')
 const headerBottom = document.querySelector('.header-bottom')
+const headerBottomMobile = document.querySelector('.header-bottom-mobile')
 headerBottom.innerHTML = header.innerHTML
+headerBottomMobile.querySelector('.navbar').innerHTML = header.querySelector('.navbar').innerHTML
+headerBottomMobile.querySelector('.header-bottom__logo').innerHTML = header.querySelector('.logo').innerHTML
+
+const feedbackDots = document.querySelectorAll('.feedback__dot')
+const feedbackItems = document.querySelectorAll('.feedback-item')
+feedbackDots.forEach((dot) => {
+    dot.addEventListener('click', e => {
+        feedbackDots.forEach(dot => {
+            dot.classList.remove('feedback__dot--active')
+        })
+        e.target.classList.add('feedback__dot--active')
+        index = e.target.dataset.index
+        feedbackItems.forEach(feedback => {
+            feedback.style.transform = `translateX(${-(index) * 100}%)`
+        })
+    })
+})
+
+const atmosphereDots = document.querySelectorAll('.atmosphere__dot')
+const atmosphereItems = document.querySelectorAll('.atmosphere-item')
+atmosphereDots.forEach((dot) => {
+    dot.addEventListener('click', e => {
+        atmosphereDots.forEach(dot => {
+            dot.classList.remove('atmosphere__dot--active')
+        })
+        e.target.classList.add('atmosphere__dot--active')
+        index = e.target.dataset.index
+        atmosphereItems.forEach(atmosphere => {
+            atmosphere.style.transform = `translateX(${-(index) * 100}%)`
+        })
+    })
+})
+
+const menuDrawer = document.querySelector('.menu-drawer')
+menuDrawer.innerHTML = header.querySelector('.navbar').innerHTML
