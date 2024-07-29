@@ -69,3 +69,7 @@ serviceBtn.forEach(btn => {
         }
     })
 })
+
+const header = document.querySelector('.header')
+const headerBottom = document.querySelector('.header-bottom')
+headerBottom.innerHTML = header.innerHTML
