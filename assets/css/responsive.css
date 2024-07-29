@@ -19,6 +19,10 @@
     .header-bottom-mobile{
         display: none;
     }
+
+    .atmosphere__list-dots{
+        display: none;
+    }
 }
 /* Tablet and Mobile */
 @media screen and (max-width: 991.98px){
