@@ -617,3 +617,31 @@ a{
 }
 
 /* Service */
+.service{
+    padding: 95px 0;
+}
+
+.service__heading{
+    margin-bottom: 80px;
+}
+
+.service-item{
+    display: flex;
+    padding: 12px 0;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--black);
+}
+
+.service-item__desc{
+    width: 60%;
+    margin-top: 23px;
+}
+
+.service__btn:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.service-item__desc{
+    display: none;
+}

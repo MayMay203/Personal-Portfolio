@@ -45,3 +45,27 @@ feedbackDots.forEach((dot) => {
         })
     })
 })
+
+const serviceBtn = document.querySelectorAll('.service__btn')
+let plus = false;
+serviceBtn.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        console.log(plus)
+        const serviceItem = btn.parentNode.parentNode
+        const serviceHeading = serviceItem.querySelector('.section-item-heading')
+        const serviceDetail = serviceItem.querySelector('.service-item__desc');
+        if (!plus) {
+            plus = true;
+            serviceItem.style.borderColor = 'var(--primary-purple)';
+            serviceHeading.style.color = 'var(--primary-purple)'
+            serviceDetail.style.display = 'block'
+            e.target.src = './assets/img/Left.png'
+        }
+        else {
+            plus = false;
+            serviceItem.style.borderColor = 'var(--black)';
+            serviceHeading.style.color = 'var(--black)'
+            serviceDetail.style.display = 'none'
+        }
+    })
+})
