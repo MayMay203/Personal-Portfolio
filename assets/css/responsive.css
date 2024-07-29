@@ -8,6 +8,10 @@
         display: none;
     }
 
+    .menu-drawer{
+        display: none;
+    }
+
     .special__list-dots{
         display: none;
     }
