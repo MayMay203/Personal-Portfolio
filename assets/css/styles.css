@@ -66,10 +66,15 @@ a{
     background-color: var(--primary-purple);
     padding: 6px;
     text-decoration: none;
+    position: relative;
+    z-index: 1;
+    transition: .2s ease;
 }
 
 .common-btn:hover{
-    opacity: 0.8;
+    color: var(--primary-purple);
+    background-color: #fff;
+    border: 1px solid var(--primary-purple)
 }
 
 .section-heading{
@@ -401,10 +406,11 @@ a{
     font-style: normal;
     font-weight: 700;
     line-height: 1.67;
+    border-color: 1px solid transparent;
 }
 
 .project__btn:hover{
-    opacity: 0.9;
+    border: 1px solid var(--black)
 }
 
 /* Journey */
