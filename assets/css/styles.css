@@ -536,7 +536,7 @@ a{
     align-items: center;
     width: 100%;
     transition: .3s ease;
-    flex: 1;
+    flex-shrink: 0!important;
 }
 
 .feedback__msg{
