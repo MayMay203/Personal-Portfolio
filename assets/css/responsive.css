@@ -3,6 +3,10 @@
     .container{
         max-width: 1170px;
     }
+
+    .header-mobile{
+        display: none;
+    }
     
     .header__menu{
         display: none;
@@ -29,6 +33,10 @@
     .header,
     .header-bottom{
         max-width: 100%;
+    }
+
+    .header-mobile{
+        display: block;
     }
 
     .overlay{
