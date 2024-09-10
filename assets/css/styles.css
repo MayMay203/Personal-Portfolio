@@ -97,7 +97,7 @@ a{
 /* Header */
 .header{
     width: 100%;
-    max-width: calc(100% - 48px);
+    /* max-width: calc(100% - 48px); */
     margin: 0 auto;
     padding: 24px 0 0;
     position: sticky;
@@ -164,10 +164,11 @@ a{
 
 .hero__img{
     width: 90%;
-    height: 705px;
+    height: 100vh;
     object-fit: cover;
     position: relative;
     z-index: 1;
+    border-radius: 12px;
 }
 
 .hero__decor{
@@ -182,7 +183,7 @@ a{
 
 .hero__heading{
     color: var(--black);
-    font-size: 8rem;
+    font-size: 7rem;
     font-style: normal;
     font-weight: 500;
     line-height: 0.95;
@@ -190,7 +191,7 @@ a{
 }
 
 .hero__desc{
-    width: 82%;
+    width: 100%;
     margin: 20px 0 50px;
 }
 
@@ -221,7 +222,7 @@ a{
     display: flex;
     align-items: center;
     column-gap: 15px;
-    margin-top: 104px;
+    margin-top: 50px;
 }
 
 .hero__follow-title{
@@ -309,6 +310,7 @@ a{
     padding: 24px;
     background-color: #FBFAFF;
     transition: .3s ease;
+    min-height: 330px;
 }
 
 .project-item:hover,
@@ -533,8 +535,8 @@ a{
     flex-direction: column;
     align-items: center;
     width: 100%;
-    flex-shrink: 0;
     transition: .3s ease;
+    flex: 1;
 }
 
 .feedback__msg{
